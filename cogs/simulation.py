@@ -31,7 +31,16 @@ class Simulation(object):
 
         await ctx.send(f"*Hugs {member}*")
 
+    @command()
+    @cooldown(1, 5, BucketType.user)
+    async def love(self, ctx:Context, member:Member):
+        '''
+        Loves a mentioned user
+        '''
 
+        await ctx.send(f"*Loves {member}*")
+        
+        
     @command()
     @cooldown(1, 5, BucketType.user)
     async def slap(self, ctx:Context, member:Member):
